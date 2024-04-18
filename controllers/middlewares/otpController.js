@@ -76,10 +76,10 @@ router.post("/request-otp", async (req, res) => {
   const transporter = nodemailer.createTransport({
     service: "gmail",
     auth: {
-      user: "vinayak.intcon@gmail.com",
-      pass: "pahv npbs dnhz pqgi",
+        user: "rohitkumbhar7009@gmail.com",
+        pass: "vwjz zrbe rwbe dhnj",
     },
-  });
+});
 
   const mailOptions = {
     from: "vinayak.intcon@gmail.com",

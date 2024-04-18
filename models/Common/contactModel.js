@@ -53,7 +53,7 @@ const contactSchema = new mongoose.Schema({
             type: mongoose.Schema.Types.ObjectId,
             type: Array,
             ref: 'tag', 
-           // required: true
+            required: true
     }],
 
     country: {

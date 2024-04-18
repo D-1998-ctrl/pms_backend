@@ -119,6 +119,7 @@ const updateJob = async (req, res) => {
     }
 };
 
+
 const getJobList = async (req, res) => {
     try {
         const jobs = await Job.find()
@@ -170,7 +171,7 @@ const getJobList = async (req, res) => {
                 DueDate: job.enddate,
                 StartsIn: job.startsin ? `${job.startsin} ${job.startsinduration}` : null,
                 DueIn: job.duein ? `${job.duein} ${job.dueinduration}` : null,
-                createdAt: job.createdAt,
+                              createdAt: job.createdAt,
                 updatedAt: job.updatedAt,
             });
         }
@@ -237,7 +238,9 @@ const getJobListbyid = async (req, res) => {
                 StartDate: jobs.startdate,
                 DueDate: jobs.enddate,
                 StartsIn: jobs.startsin ? `${jobs.startsin} ${jobs.startsinduration}` : null,
-                DueIn: jobs.duein ? `${jobs.duein} ${jobs.dueinduration}` : null,
+                DueIn: jobs.duein ? `${jobs.duein} ${jobs.dueinduration} `: null,
+                Priority : jobs.priority,
+                Description : jobs.description,
                 createdAt: jobs.createdAt,
                 updatedAt: jobs.updatedAt,
             });
